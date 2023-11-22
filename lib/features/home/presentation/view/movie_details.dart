@@ -258,21 +258,26 @@ class MovieImageContainer extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => MovieDetailsScreen(id: id),
             ));
-      },
-      child: Container(
-        width: width,
-        height: height,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: NetworkImage("$imageUrl/$url"), fit: BoxFit.cover),
-        ),
-        child: const Align(
-            alignment: Alignment.topLeft,
-            child: Icon(
-              Icons.bookmark,
-              size: 30,
-            )),
-      ),
+      },child: CachedNetworkImage(
+      imageUrl: "$imageUrl/$url",
+      width: width,
+      height: height,
+      fit: BoxFit.cover,
+    ),
+      // child: Container(
+      //   width: width,
+      //   height: height,
+      //   decoration: BoxDecoration(
+      //     image: DecorationImage(
+      //         image: NetworkImage("$imageUrl/$url"), fit: BoxFit.cover),
+      //   ),
+      //   child: const Align(
+      //       alignment: Alignment.topLeft,
+      //       child: Icon(
+      //         Icons.bookmark,
+      //         size: 30,
+      //       )),
+      // ),
     );
   }
 }
@@ -322,7 +327,7 @@ class MoreLikeThisListItem extends StatelessWidget {
           MovieImageContainer(
             width: 90,
             height: 120,
-            url: recomendedModel.posterPath!,
+            url: recomendedModel.posterPath ?? '',
             id: id,
           ),
           const SizedBox(
