@@ -33,8 +33,8 @@ class FirstSection extends StatelessWidget {
             return Shimmer.fromColors(
               baseColor: Colors.grey,
               highlightColor: Colors.white,
-              child: Expanded(
-                flex: 1,
+              child: SizedBox(
+                height: 220,
                 child: Stack(
                   children: [
                     Container(
