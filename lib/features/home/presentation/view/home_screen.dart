@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
   List screens = [
     const HomeScreenBody(),
-    const SearchScren(),
+    const SearchScreen(),
     const BrowseScreen(),
     const WatchListScreen()
   ];

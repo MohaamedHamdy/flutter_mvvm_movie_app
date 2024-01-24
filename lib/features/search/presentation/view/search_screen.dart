@@ -5,8 +5,8 @@ import 'package:movies_app/core/utils/styles.dart';
 import 'package:movies_app/features/watchlist/presentation/view/widgets/movie_row_item.dart';
 import 'widgets/search_field.dart';
 
-class SearchScren extends StatelessWidget {
-  const SearchScren({super.key});
+class SearchScreen extends StatelessWidget {
+  const SearchScreen({super.key});
   final isEmpty = true;
 
   @override

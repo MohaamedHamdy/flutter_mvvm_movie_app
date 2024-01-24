@@ -258,12 +258,13 @@ class MovieImageContainer extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => MovieDetailsScreen(id: id),
             ));
-      },child: CachedNetworkImage(
-      imageUrl: "$imageUrl/$url",
-      width: width,
-      height: height,
-      fit: BoxFit.cover,
-    ),
+      },
+      child: CachedNetworkImage(
+        imageUrl: "$imageUrl/$url",
+        width: width,
+        height: height,
+        fit: BoxFit.cover,
+      ),
       // child: Container(
       //   width: width,
       //   height: height,
