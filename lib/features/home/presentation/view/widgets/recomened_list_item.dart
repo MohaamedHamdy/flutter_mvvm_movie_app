@@ -17,7 +17,7 @@ class RecomendedListItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageWidgetItem(
-            height: 140,
+            height: 120,
             width: 120,
             url: recomendedModel.posterPath,
             id: recomendedModel.id!,

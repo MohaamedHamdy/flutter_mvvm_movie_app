@@ -14,7 +14,7 @@ class MovieRowItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsets.only(left: 18.0, top: 30, right: 18.0, bottom: 10.0),
+          const EdgeInsets.only(left: 18.0, top: 30, right: 8.0, bottom: 10.0),
       child: Column(
         children: [
           Row(

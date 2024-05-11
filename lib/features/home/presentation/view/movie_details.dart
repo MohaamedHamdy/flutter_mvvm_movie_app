@@ -59,7 +59,7 @@ class MovieDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 18.0),
@@ -74,7 +74,7 @@ class MovieDetailsScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Text(
                           '${state.movieDetailsModel[0].releaseDate} PG-13 ${double.parse(hour.toStringAsFixed(1))}h',
@@ -85,7 +85,7 @@ class MovieDetailsScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +126,7 @@ class MovieDetailsScreen extends StatelessWidget {
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
-                                const SizedBox(height: 8),
+                                const SizedBox(height: 4),
                                 Row(
                                   children: [
                                     const Icon(
@@ -149,15 +149,12 @@ class MovieDetailsScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       color: const Color.fromRGBO(40, 42, 40, 1),
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0, top: 10),
+                        padding: const EdgeInsets.only(left: 20.0, top: 0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -174,7 +171,7 @@ class MovieDetailsScreen extends StatelessWidget {
 
                   // to leave a part of screen at the bottom
                   const SizedBox(
-                    height: 20,
+                    height: 14,
                   ),
                 ],
               ),
@@ -211,7 +208,7 @@ class MoreLikeThisListView extends StatelessWidget {
           if (state is MoreLikeThisSuccess) {
             return SizedBox(
               width: double.infinity,
-              height: 185,
+              // height: 185,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) => MoreLikeThisListItem(
@@ -326,8 +323,8 @@ class MoreLikeThisListItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           MovieImageContainer(
-            width: 90,
-            height: 120,
+            width: 80,
+            height: 90,
             url: recomendedModel.posterPath ?? '',
             id: id,
           ),
@@ -374,9 +371,9 @@ class MoreLikeThisListItem extends StatelessWidget {
                     color: Color.fromRGBO(181, 180, 180, 1),
                   ),
                 ),
-                const SizedBox(
-                  height: 4,
-                ),
+                // const SizedBox(
+                //   height: 4,
+                // ),
               ],
             ),
           ),
